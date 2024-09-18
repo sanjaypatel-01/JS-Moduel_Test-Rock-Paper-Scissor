@@ -11,7 +11,7 @@ body {
 
 .container {
     background-color: #8CC461;
-    width: full;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -99,6 +99,7 @@ body {
     /* background-color: rgb(166, 166, 178); */
     width: 360px;
     height: 330px;
+    margin: auto;
     position: relative;
 }
 
@@ -192,3 +193,50 @@ body {
     left: 117px;
     transform: rotate(-30deg); 
 }
+
+.container-two {
+    display: flex;
+    background-color: blue;
+    width: 100vw;
+    height: auto;
+    position: relative;
+  
+}
+
+.rule-box {
+   background-color: #004429;
+   color: white;
+   width: 280px;
+   height: 310px;
+   position: absolute;
+   right: 0;
+   margin-right: 70px;
+   border-radius: 13px;
+   border-color: #FFFFFF;
+   border-width: 7px;
+   border-style: solid;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 10px;
+}
+
+.heading-game-rules {
+   font-size: 29px;
+   letter-spacing: normal;
+   text-align: center;
+   padding-top: 15px;
+}
+
+.text-game-rules {
+   margin-top: 10px;
+   font-size: 13px;
+   letter-spacing: normal;
+   text-align: left;
+   padding-top: 10px;
+   padding-left: 20px;  
+   width: 216px;
+   list-style-type: square;
+
+}
+
