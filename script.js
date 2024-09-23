@@ -168,6 +168,7 @@ playAgainButton.addEventListener("click", function () {
   containerTwo.style.display = "flex"; // Show game container
   ruleBox.style.display = "none";
   closeButton.style.display = "none"; // Hide rules and close button section
+  nextButton.style.display = "none";s
 });
 
 nextButton.addEventListener("click", () => {
