@@ -22,14 +22,21 @@ body {
 
 .score-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   /* background-color: blue; */
   padding: 15px;
   border-color: white;
   border-radius: 13px;
   border-width: 2px;
   border-style: solid;
-  width: 800px;
+  width: 730px;
+}
+
+.sub-score-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
 }
 
 .game-title {
@@ -43,7 +50,7 @@ body {
 }
 
 .container-computer-score {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   width: 139px;
   height: 128px;
   background-color: white;
@@ -55,7 +62,7 @@ body {
 }
 
 .container-player-score {
-  margin-left: 39px;
+  /* margin-left: 39px; */
   width: 139px;
   height: 128px;
   background-color: white;
