@@ -40,16 +40,26 @@ gameResults.style.display = "none";
 nextButton.style.display = "none";
 displayGameWon.style.display = "none";
 
-// Show the rules and close button when the RULES button is clicked
+// Show or hide the rules section when the RULES button is clicked
+let isRuleBoxVisible = false;
+
 ruleButton.addEventListener("click", function () {
-  ruleBox.style.display = "flex"; // Show the rules
-  closeButton.style.display = "flex"; // Show the rules
+  if (isRuleBoxVisible) {
+    ruleBox.style.display = "none"; 
+    closeButton.style.display = "none"; 
+    isRuleBoxVisible = false;
+  } else {
+    ruleBox.style.display = "flex"; 
+    closeButton.style.display = "flex"; 
+    isRuleBoxVisible = true;
+  }
 });
 
-// Hide the rules when the cross is clicked
+// Hide the rules when the cross button is clicked
 closeButton.addEventListener("click", function () {
-  ruleBox.style.display = "none"; // Hide the rules
-  closeButton.style.display = "none"; // Show the rules
+  ruleBox.style.display = "none"; 
+  closeButton.style.display = "none"; 
+  isRuleBoxVisible = false; 
 });
 
 const drawGame = (userChoice, computerChoice) => {
@@ -70,14 +80,12 @@ const drawGame = (userChoice, computerChoice) => {
   // Disable animations for both choices during a tie
   userPickedDisplay.classList.add("no-animation");
   pcPickedDisplay.classList.add("no-animation");
-
 };
-
 
 const showWinner = (userWin, userChoice, computerChoice) => {
   // Clear previous winners
-  userPickedDisplay.classList.remove('no-animation', 'winner-border');
-  pcPickedDisplay.classList.remove('no-animation', 'winner-border');
+  userPickedDisplay.classList.remove("no-animation", "winner-border");
+  pcPickedDisplay.classList.remove("no-animation", "winner-border");
 
   if (userWin) {
     console.log("User Wins");
@@ -176,6 +184,7 @@ nextButton.addEventListener("click", () => {
   displayGameWon.style.display = "flex";
   scoreContainer.style.display = "none";
   gameResults.style.display = "none";
+  nextButton.style.display = "none";
 });
 
 buttonPlayAgainTwo.addEventListener("click", () => {
