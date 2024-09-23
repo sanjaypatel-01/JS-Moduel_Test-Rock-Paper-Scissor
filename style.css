@@ -200,7 +200,6 @@ body {
     width: 100vw;
     height: auto;
     position: relative;
-    /* display: none; */
   
 }
 
@@ -222,6 +221,8 @@ body {
    padding: 10px;
    position: absolute;
    top: 46px;
+   
+   
 }
 
 .heading-game-rules {
@@ -245,6 +246,7 @@ body {
 
 .container-rule-box {
   position: relative;
+  
 }
 
 .cross {
@@ -311,7 +313,6 @@ body {
    position: absolute; 
    bottom: 50px; 
    right: 185px; 
-   display: none;
 }
 
 
@@ -319,7 +320,6 @@ body {
   display: flex;
   background-color: transparent;
   gap: 110px;
-  display: none;
 }
 
 .user-choice, .pc-choice {
@@ -369,5 +369,54 @@ body {
   text-align: center;
 }
 
+.user-picked, .pc-picked {
+  transition: transform 0.3s ease;
+}
 
+.won-game {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffff;
+}
 
+.won-game-heading {
+  font-weight: 600;
+  font-size: 91px; 
+}
+
+.won-game-sub-heading {
+  font-weight: 500;
+  font-size: 41px; 
+  margin-bottom: 16px; 
+}
+
+#stars {
+  position: relative;
+}
+
+#trophy {
+  margin-top: 80px;
+  margin-bottom: 240px;
+  position: absolute;
+}
+
+.button-play-again-two {
+  margin-top: 20px;
+  width: 174px;
+  height: 44px;
+  border-radius: 9px;
+  border: 2px solid rgb(241, 241, 241);
+  font-size: 15px;
+  padding: 10px 20px; 
+  color: #6B6B6B;
+  font-weight: 700;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background-color: white; 
+  cursor: pointer; 
+  text-align: center;
+}
