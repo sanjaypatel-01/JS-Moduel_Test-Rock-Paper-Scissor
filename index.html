@@ -14,11 +14,11 @@
             <h2 class="game-title">ROCK <br> PAPER <br> SCISSORS</h2>
             <div class="container-computer-score">
                 <h3 class="computer-score"> COMPUTER <br> SCORE</h3>
-                <h3 class="computer-score-count">0</h3>
+                <h3 class="computer-score-count" id="compScore">0</h3>
             </div>
             <div class="container-player-score">
                 <h3 class="player-score"> YOUR <br> SCORE</h3>
-                <h3 class="player-score-count">0</h3>
+                <h3 class="player-score-count" id="userScore">0</h3>
             </div>
         </div>
 
@@ -27,15 +27,15 @@
         <div class="game-container">
 
             <div class="game-container-one">
-                <div class="rock">
+                <div class="rock" id="rock">
                     <img src="images/rock.png" alt="rock">
                 </div>
-                <div class="scissor">
+                <div class="scissor" id="scissor">
                     <img src="images/scissor.png" alt="scissor">
                 </div>   
             </div>
             <div class="game-container-two">
-                <div class="paper">
+                <div class="paper" id="paper">
                     <img src="images/paper.png" alt="paper">
                 </div>
             </div>
@@ -65,6 +65,8 @@
         </div>
 
     </div>
+
+    
 
     <!-- footer -->
     <div class="btn-rules">
