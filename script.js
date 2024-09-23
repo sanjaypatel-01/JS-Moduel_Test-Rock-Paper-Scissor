@@ -19,6 +19,9 @@ const showWinner = (userWin) => {
         console.log('You lose');
         compScore++;
         document.querySelector('#compScore').innerText = compScore;
+        // can also do like
+        // updateScore = document.querySelector('#compScore')
+        // updateScore.innerText = compScore;
     }
 }
 
