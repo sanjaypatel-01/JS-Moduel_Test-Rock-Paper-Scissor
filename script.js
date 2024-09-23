@@ -40,26 +40,16 @@ gameResults.style.display = "none";
 nextButton.style.display = "none";
 displayGameWon.style.display = "none";
 
-// Show or hide the rules section when the RULES button is clicked
-let isRuleBoxVisible = false;
-
+// Show the rules and close button when the RULES button is clicked
 ruleButton.addEventListener("click", function () {
-  if (isRuleBoxVisible) {
-    ruleBox.style.display = "none"; 
-    closeButton.style.display = "none"; 
-    isRuleBoxVisible = false;
-  } else {
-    ruleBox.style.display = "flex"; 
-    closeButton.style.display = "flex"; 
-    isRuleBoxVisible = true;
-  }
+  ruleBox.style.display = "flex"; // Show the rules
+  closeButton.style.display = "flex"; // Show the rules
 });
 
-// Hide the rules when the cross button is clicked
+// Hide the rules when the cross is clicked
 closeButton.addEventListener("click", function () {
-  ruleBox.style.display = "none"; 
-  closeButton.style.display = "none"; 
-  isRuleBoxVisible = false; 
+  ruleBox.style.display = "none"; // Hide the rules
+  closeButton.style.display = "none"; // Show the rules
 });
 
 const drawGame = (userChoice, computerChoice) => {
