@@ -383,6 +383,7 @@ body {
 }
 
 .won-game-heading {
+  margin-top: 50px;
   font-weight: 600;
   font-size: 91px; 
 }
@@ -390,7 +391,7 @@ body {
 .won-game-sub-heading {
   font-weight: 500;
   font-size: 41px; 
-  margin-bottom: 16px; 
+  margin-bottom: 35px; 
 }
 
 #stars {
@@ -441,3 +442,55 @@ body {
 .no-animation {
   animation: none; /* Disables any animations */
 }
+
+
+/* won-game page animations  */
+/* Trophy animation */
+#trophy {
+  animation: trophyBounce 1.0s ease-in-out infinite;
+}
+
+@keyframes trophyBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+/* Stars Animation */
+#stars {
+  animation: starsAnimation 1.5s ease-in-out infinite;
+}
+
+@keyframes starsAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* .won-game-heading {
+  animation: hurrayAnimation 1.5s ease-in-out infinite; 
+}
+
+@keyframes hurrayAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+} */
