@@ -1,5 +1,11 @@
-let userScore = 0;
-let compScore = 0;
+let userScore = localStorage.getItem('userScore') ? parseInt(localStorage.getItem('userScore')) : 0;
+let compScore = localStorage.getItem('compScore') ? parseInt(localStorage.getItem('compScore')) : 0;
+
+// let userScore = 0;
+// let compScore = 0;
+
+document.querySelector('#userScore').innerText = userScore;
+document.querySelector('#compScore').innerText = compScore;
 
 const rock = document.querySelector('#rock');
 const scissor = document.querySelector('#scissor');
@@ -67,6 +73,7 @@ const showWinner = (userWin, userChoice, computerChoice) => {
         messagewin.innerText = "YOU WIN"
         userScore++;
         document.querySelector('#userScore').innerText = userScore;
+        localStorage.setItem('userScore', userScore);
         nextButton.style.display = 'flex';
 
     } else {
@@ -74,6 +81,7 @@ const showWinner = (userWin, userChoice, computerChoice) => {
         messagewin.innerText = "YOU LOST"
         compScore++;
         document.querySelector('#compScore').innerText = compScore;
+        localStorage.setItem('compScore', compScore);
         nextButton.style.display = 'none';
         // can also do like
         // updateScore = document.querySelector('#compScore')
@@ -162,3 +170,4 @@ buttonPlayAgainTwo.addEventListener('click', () => {
     scoreContainer.style.display = 'flex'; 
     containerTwo.style.display = 'flex';
 });
+
